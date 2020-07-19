@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,14 @@ export class AppComponent {
   title = 'angularspa';
   textField = new FormControl('');
 
+  constructor(private http: HttpClient) {}
+
   onClick() {
     console.log('call backend api to get data');
-    console.log(this.textField.value);
-    this.textField.setValue( 'new value');
+    const str = this.textField.value;
+    this.http.get('https://springapitestli.azurewebsites.net/jsonapi/' + str).subscribe((resp) => {
+      this.textField.setValue(JSON.stringify(resp));
+    });
   }
 
   onLogin() {
