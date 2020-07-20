@@ -1,9 +1,17 @@
-
 <div class="content" role="main">
-<div>App Component</div>
-<div><button (click)="onLogin()">Log in</button></div>
-<div><textarea style="width: 50%;" rows="12" [formControl]="textField"></textarea></div>
-<div><button (click)="onClick()">Get data from backend service API</button></div>
+  <div>Angular SPA web app</div>
+  <div><input style="width: 50%;" type="text" [formControl]="titleField" /></div>
+  <div><textarea style="width: 50%;" rows="12" [formControl]="textField"></textarea></div>
+  <div>Result:</div>
+  <div><textarea style="width: 50%;" rows="12" [formControl]="resultField"></textarea></div>
+  <div><button (click)="onLogin()">Log in</button></div>
+  <div><button (click)="onClick()">Get data from backend service API</button></div>
+  <div>
+    <button (click)="onClickStorage(0)">Storage upload</button>
+    <button (click)="onClickStorage(1)">Storage list</button>
+    <button (click)="onClickStorage(2)">Storage delete</button>
+    <button (click)="onClickStorage(3)">Storage download</button>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
