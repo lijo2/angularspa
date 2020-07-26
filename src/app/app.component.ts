@@ -28,6 +28,20 @@ export class AppComponent {
     return window.location.host.startsWith('localhost');
   }
 
+  async hello() {
+    return 'hello';
+  }
+
+  async onSync() {
+    const val = this.hello();
+    val.then(v1 => {
+      console.log(v1);
+    });
+
+    const v = await this.hello();
+    console.log(v);
+  }
+
   onClick() {
     console.log('call backend api to get data');
     const str = this.textField.value;
