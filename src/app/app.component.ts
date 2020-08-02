@@ -10,8 +10,8 @@ import { ActivatedRouteSnapshot } from '@angular/router';
 })
 export class AppComponent {
   title = 'angularspa';
-  textField = new FormControl('');
-  titleField = new FormControl('');
+  titleField = new FormControl('title');
+  textField = new FormControl('data');
   resultField = new FormControl('');
 
   serviceUrl: string;
@@ -59,6 +59,7 @@ export class AppComponent {
 
       this.http.post(this.serviceUrl + '/storages/', data).subscribe((resp) => {
         this.resultField.setValue(resp);
+        console.lo
       });
     } else if (id === 1) {
       this.http.get(this.serviceUrl + '/storages/').subscribe((resp) => {
