@@ -441,7 +441,7 @@ module.exports = exported;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\lijo\Documents\Source\sample\angularspa\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\lijo\Documents\Source\sample\azure\spawebappli\src\styles.css */"./src/styles.css");
 
 
 /***/ })

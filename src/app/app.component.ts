@@ -59,7 +59,6 @@ export class AppComponent {
 
       this.http.post(this.serviceUrl + '/storages/', data).subscribe((resp) => {
         this.resultField.setValue(resp);
-        console.lo
       });
     } else if (id === 1) {
       this.http.get(this.serviceUrl + '/storages/').subscribe((resp) => {
