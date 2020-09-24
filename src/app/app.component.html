@@ -9,13 +9,13 @@
   <div>Output:</div>
   <div><textarea style="width: 50%;" rows="12" [formControl]="resultField"></textarea></div>
   <div><button (click)="onLogin()">Log in (not implemented)</button></div>
-  <div><button (click)="onClick()">Call backend (/jsonapi/subjectData)</button></div>
-  <div><button (click)="onSync()">Sync test (local sync await test)</button></div>
+  <div><button (click)="onClick()">Call backend, set subject text to 'title' (/jsonapi/title) </button></div>
+  <div><button (click)="onTempTest()">temp test</button><button (click)="onTempTest2()">temp test2</button></div>
   <div>
-    <button (click)="onClickStorage(0)">Storage upload</button>
-    <button (click)="onClickStorage(1)">Storage list</button>
-    <button (click)="onClickStorage(2)">Storage delete</button>
-    <button (click)="onClickStorage(3)">Storage download</button>
+    <button (click)="onClickStorage(0)">Storage upload (set store name as subject, data in data</button>
+    <button (click)="onClickStorage(1)">Storage list (no param required)</button>
+    <button (click)="onClickStorage(2)">Storage delete (set subject as store name)</button>
+    <button (click)="onClickStorage(3)">Storage download (set subject as store name)</button>
   </div>
 </div>
 
